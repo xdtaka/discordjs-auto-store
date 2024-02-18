@@ -19,6 +19,7 @@ Open the config.json file:
 - Replace `testServer` with your server's ID.
 
 Running the Bot (Discord Bot and Growtopia Bot):
+
 To run the Growtopia bot:
 - Copy the contents of `depoBot.lua`.
 - Paste it into your Lucifer executor.
