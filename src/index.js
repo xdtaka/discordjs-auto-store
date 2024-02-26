@@ -35,13 +35,9 @@ app.listen(PORT, () => {
         await mongoose.set('strict', false) //Turn off strict mode for MongoDB (optional)
         await mongoose.connect(process.env.MONGODB_URI)
         console.log("Connected to db")
+        bot.login(process.env.TOKEN);
         eventHandler(bot)
     } catch (error) {
         console.log(error)
     }
 })();
-
-
-
-
-bot.login(process.env.TOKEN);
