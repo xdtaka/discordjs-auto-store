@@ -16,24 +16,24 @@ module.exports = async(interaction) => {
 
 
     if (!stock) {
-        interaction.editReply({embeds: [embedDesc(`Stock not found. Please try again.`)], ephemeral: true})
+        interaction.reply({embeds: [embedDesc(`Stock not found. Please try again.`)], ephemeral: true})
         return;
     }
     let totalPrice = stock.price * amount
     
     if (totalPrice > user.balance) {
-        interaction.editReply({ embeds: [embedDesc(`You don't have enough balance to buy. Please deposit.`)], ephemeral: true });
+        interaction.reply({ embeds: [embedDesc(`You don't have enough balance to buy. Please deposit.`)], ephemeral: true });
         return;
     }
 
     if (amount > stock.stockList.length && stock.stockList.length > 0 && amount > 0) {
-        interaction.editReply({ embeds: [embedDesc(`You can't buy more than that.`)], ephemeral: true });
+        interaction.reply({ embeds: [embedDesc(`You can't buy more than that.`)], ephemeral: true });
         return;
     }else if (amount <= 0) {
-        interaction.editReply({ embeds: [embedDesc(`The minimum purchase is 1.`)], ephemeral: true });
+        interaction.reply({ embeds: [embedDesc(`The minimum purchase is 1.`)], ephemeral: true });
         return;
     }else if (stock.stockList.length === 0) {
-        interaction.editReply({ embeds: [embedDesc(`Out of stock.`)], ephemeral: true });
+        interaction.reply({ embeds: [embedDesc(`Out of stock.`)], ephemeral: true });
         return;
     }
 
