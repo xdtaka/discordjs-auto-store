@@ -1,4 +1,4 @@
-Download this then Run `npm install discord.js@^14.14.1 dotenv@^16.4.1 express@^4.18.2 mongodb@^6.3.0 mongoose@^8.1.1 ms@^2.1.3 pretty-ms@^9.0.0 --save`.
+Download Node.js and this repo then Run `npm install discord.js@^14.14.1 dotenv@^16.4.1 express@^4.18.2 mongodb@^6.3.0 mongoose@^8.1.1 ms@^2.1.3 pretty-ms@^9.0.0 --save`.
 
 Open MongoDB website:
 - Log in.
