@@ -1,4 +1,4 @@
-const {Client, IntentsBitField, EmbedBuilder, Embed, ActivityType} = require('discord.js');
+const {Client, IntentsBitField, EmbedBuilder, Embed, ActivityType, Events} = require('discord.js');
 const eventHandler = require('./handlers/eventHandler.js');
 const mongoose = require('mongoose')
 const express = require('express');
@@ -20,9 +20,6 @@ app.use(express.json());
 
 app.post('/addbalance/:user/:amount', (req, res) => {
   const { user, amount } = req.params;
-  console.log("received post")
-  console.log(user)
-  console.log(amount)
   addBalance(bot, user, amount)
   res.sendStatus(200);
 });
