@@ -35,8 +35,8 @@ module.exports = async(interaction, code, totalPrice, amount) => {
         await guildDB.save()
         guildDB = await Guild.findOne({guildId: interaction.guild.id} )
         if (amount) {
-            await logChannel.send({embeds: [embedDesc(`Order #${guildDB.orderCount += 1}`, `Buyer: <@${interaction.member.id}>\nProduct: **${amount} ${stock.name}**\nTotal Price: **${totalPrice}**  <:wl:1205953655908466839>`).setFooter({text:`Total Income: ${guildDB.totalIncome += totalPrice} wls`})]})
-        }else {await logChannel.send({embeds: [embedDesc(`Order #${guildDB.orderCount += 1}`, `Buyer: <@${interaction.member.id}>\nProduct: **${stock.name}**\nTotal Price: **${totalPrice}**  <:wl:1205953655908466839>`).setFooter({text:`Total Income: ${guildDB.totalIncome += totalPrice} wls`})]})}
+            await logChannel.send({embeds: [embedDesc(`Order #${guildDB.orderCount += 1}`, `Buyer: <@${interaction.member.id}>\nProduct: **${amount} ${stock.name}**\nTotal Price: **${totalPrice}**  <:wl:1205953655908466839>`).setFooter({text:`Total Income: ${guildDB.totalIncome} wls`})]})
+        }else {await logChannel.send({embeds: [embedDesc(`Order #${guildDB.orderCount += 1}`, `Buyer: <@${interaction.member.id}>\nProduct: **${stock.name}**\nTotal Price: **${totalPrice}**  <:wl:1205953655908466839>`).setFooter({text:`Total Income: ${guildDB.totalIncome} wls`})]})}
         return;
     }
 
