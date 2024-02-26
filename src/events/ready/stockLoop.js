@@ -21,6 +21,7 @@ module.exports = async(bot) => {
             const stocks2 = await Stock.find({stockType : 2});
             const guild = await Guild.findOne({guildId: testServer});
     
+            if (!guild) return;
             if (!guild.messageId) return;
             
 
