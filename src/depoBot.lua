@@ -5,7 +5,7 @@ script = [[
    banMsg = true
    sendNotif =true -- if true bot will send webhook
    
-   webhook = "https://discord.com/api/webhooks/1208165350160732240/RVUTntOeaSHw8f5ZjK7RY5x2TJYOMzHELE5OrCJPWxOoHD32Dwg-sN0nKZQkB1kCUinR"
+   webhook = "a nigga stole my webhook"
    
    
    --Custom Your Webhook here (pfp, color, name)
